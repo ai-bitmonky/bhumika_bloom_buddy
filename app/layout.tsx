@@ -25,6 +25,17 @@ export const metadata: Metadata = {
   title: { default: "BloomBuddy — Plant care at home", template: "%s · BloomBuddy" },
   description: "In-home plant care visits and Smart Drop-off plant hubs in Delhi NCR. Trained experts, organic care and a Plant Postcard every day you're away.",
   applicationName: "BloomBuddy",
+  manifest: "/manifest.webmanifest",
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+  },
+  appleWebApp: { capable: true, title: "BloomBuddy", statusBarStyle: "black-translucent" },
+  other: { "mobile-web-app-capable": "yes" },
+  formatDetection: { telephone: false },
 };
 
 export const viewport: Viewport = {

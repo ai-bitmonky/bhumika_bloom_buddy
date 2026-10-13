@@ -480,3 +480,4 @@ body:has(.d-modal-wrap.open){overflow:hidden}
 }
 /* persona → service highlight (set as data-hl on the bento, outside React's className control) */
 .d-bento[data-hl=visit] .d-cell[data-cell=visit],.d-bento[data-hl=drop] .d-cell[data-cell=drop],.d-bento[data-hl=plus] .d-cell[data-cell=plus],.d-bento[data-hl=disease] .d-cell[data-cell=disease]{outline-color:var(--accent);transform:translateY(-4px)}
+.d-trk-qr{width:64px;height:64px;border-radius:8px}

@@ -3,6 +3,7 @@
 /* Desktop overlays: 5-step booking modal, optional OTP login, tip reader. None of them is a gate —
    booking works as a guest, and the OTP step can always be skipped. */
 
+import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { DATA, expertById, hubById, inr, plantById, suiteById } from "@/lib/data";
 import { MONTHS, SLOTS_D, bkTotals, bkValidate, fitPlants, fmtISO, useBooking, type BK } from "@/lib/booking";
@@ -240,6 +241,7 @@ const UPI_HANDLE: Record<string, string> = { GPay: "okhdfc", PhonePe: "ybl", Pay
 
 function BookModal({ onClose }: { onClose: () => void }) {
   const { bk, setBk, loggedIn, setModal } = useBooking();
+  const router = useRouter();
   const toast = useToast();
   const [err, setErr] = useState("");
   const [busy, setBusy] = useState(false);
@@ -275,7 +277,7 @@ function BookModal({ onClose }: { onClose: () => void }) {
   const next = () => {
     if (S === 5) {
       onClose();
-      toast(`Booking ${bk.id} saved · see it in the app`, "i-check");
+      toast(`Booking ${bk.id} saved · track it any time from “Track booking”`, "i-check");
       return;
     }
     const v = bkValidate(bk, upi);
@@ -847,11 +849,11 @@ function BookModal({ onClose }: { onClose: () => void }) {
                 variant="primary"
                 onClick={() => {
                   onClose();
-                  toast("Track it in the BloomBuddy app — open this site on your phone", "i-leaf");
+                  router.push("/track");
                 }}
               >
-                <Icon id="i-leaf" />
-                Track in app
+                <Icon id="i-pin" />
+                Track booking
               </Button>
             </div>
           </div>

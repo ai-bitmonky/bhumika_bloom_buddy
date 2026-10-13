@@ -4432,3 +4432,11 @@
 #mobile .m-skip{display:block;margin:12px auto 0;color:var(--primary);font:600 14px/1.3 var(--ff);text-decoration:underline;text-underline-offset:3px}
 #mobile .m-input--name{margin-bottom:14px}
 
+/* app feel on touch screens */
+#mobile{overscroll-behavior:none;touch-action:manipulation;-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none;-webkit-text-size-adjust:100%}
+#mobile .scr{overscroll-behavior-y:contain;-webkit-overflow-scrolling:touch}
+#mobile .m-hscroll{touch-action:pan-x pan-y;overscroll-behavior-x:contain;scrollbar-width:none}
+#mobile .m-hscroll::-webkit-scrollbar{display:none}
+#mobile :is(button,label,.chip){-webkit-user-select:none;user-select:none}
+#mobile :is(input,textarea,select){font-size:16px} /* stops iOS zoom-on-focus */
+#mobile .m-ba{touch-action:pan-y}

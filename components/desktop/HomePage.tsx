@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { BookBtn, ContactForm, ExpertCards, HeroWidget, PersonaTiles, PlanBtn, PlanCards, PostcardDemo, ReviewCards, SectorChips, TipCarouselSection, ToastBtn } from "./widgets";
+import { BookBtn, ContactForm, ExpertCards, HeroWidget, PersonaTiles, PlanBtn, PlanCards, PostcardDemo, ReviewCards, SectorChips, TipCarouselSection } from "./widgets";
 import { Reveal } from "@/components/shared/Reveal";
 
 /* Ported from the v1.0 desktop prototype (home). */
@@ -115,10 +115,10 @@ export function HomePage() {
       <section className="d-sec" style={{ paddingTop: "0" }}><div className="d-wrap">
       <Reveal className="d-app">
       <div>
-      <span className="eyebrow" style={{ color: "var(--pollen)" }}>BloomBuddy app</span>
+      <span className="eyebrow" style={{ color: "var(--pollen)" }}>Your plant dashboard</span>
       <h2 className="h2">{"Daily reminders. "}<em>Daily postcards.</em></h2>
-      <p>Get exact watering amounts for each plant, track bookings, and chat with your expert. Free for every customer.</p>
-      <div className="row"><ToastBtn msg="Open bloombuddy on your phone — the same site becomes the BloomBuddy app" ico="i-leaf" className="d-store" ><svg className="ico" aria-hidden="true"><use href="#i-leaf" /></svg><span><small>Get the app for</small>iPhone</span></ToastBtn><ToastBtn msg="Open bloombuddy on your phone — the same site becomes the BloomBuddy app" ico="i-leaf" className="d-store" ><svg className="ico" aria-hidden="true"><use href="#i-leaf" /></svg><span><small>Get the app for</small>Android</span></ToastBtn></div>
+      <p>Exact watering amounts for each plant, live booking tracking, and a chat with your expert — right here on bloombuddy.in, on any screen. No download, no login needed.</p>
+      <div className="row"><Link href="/track" className="d-store"><svg className="ico" aria-hidden="true"><use href="#i-pin" /></svg><span><small>Open</small>Track a booking</span></Link><Link href="/care" className="d-store"><svg className="ico" aria-hidden="true"><use href="#i-camera" /></svg><span><small>Free</small>Photo diagnosis</span></Link></div>
       </div>
       <div className="shelf"><svg viewBox="0 0 120 160"><use href="#p-tulsi" /></svg><svg viewBox="0 0 120 160"><use href="#p-pothos" /></svg><svg viewBox="0 0 120 160"><use href="#p-fern" /></svg></div>
       </Reveal>
