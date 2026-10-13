@@ -1,0 +1,26 @@
+/* BloomBuddy design tokens — light ("Greenhouse Morning") + dark ("Night Conservatory"). */
+/* ============ TOKENS ============ */
+:root{
+  --bg:#F6F1E7;--surface:#FFFFFF;--surface-2:#DCE6D8;--surface-3:#EDE6D8;--ink:#1B1F1C;--muted:#5E6A62;
+  --primary:#2F5D46;--primary-deep:#1E3A2C;--on-primary:#FFFFFF;--accent:#C9734A;--accent-ink:#A85A35;--on-accent:#FFFFFF;
+  --pollen:#E9B949;--line:rgba(30,58,44,.14);--line-2:rgba(30,58,44,.24);--danger:#C8423F;--ok:#3E8A5B;
+  --glass:#FFFFFF;--nav-bg:rgba(246,241,231,.82);--paper:#FFFDF8;--paper-ink:#1B1F1C;
+  --logo-a:#2F5D46;--logo-b:#86AE84;--sky:#F9E7C8;--wall:#F1E6D3;--floor:#D9C3A1;
+  --stage:#E7E0D2;--stage-dot:rgba(30,58,44,.10);--proto:#141916;--proto-ink:#E9EFE9;
+  --sh:0 10px 30px rgba(30,58,44,.08);--sh-lg:0 24px 60px -12px rgba(30,58,44,.22);
+  --r:20px;--r-in:14px;
+  --ff-d:var(--font-fraunces),"Fraunces","Iowan Old Style","Palatino Linotype",Georgia,serif;
+  --ff:var(--font-dm-sans),"DM Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --sb:env(safe-area-inset-top,0px);--hi:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+[data-theme="dark"]{
+  --bg:#0D1A14;--surface:#16291F;--surface-2:#1F3328;--surface-3:#1A2E23;--ink:#E9EFE9;--muted:#9FB3A7;
+  --primary:#7FE0B0;--primary-deep:#5CC894;--on-primary:#0D1A14;--accent:#F2B766;--accent-ink:#F2B766;--on-accent:#1B1408;
+  --pollen:#F2B766;--line:rgba(127,224,176,.18);--line-2:rgba(127,224,176,.30);--danger:#F07B6E;--ok:#7FE0B0;
+  --glass:rgba(22,41,31,.72);--nav-bg:rgba(13,26,20,.78);--paper:#F4EFE4;--paper-ink:#1B1F1C;
+  --logo-a:#F3F5EE;--logo-b:#C5D1AE;--sky:#1E3A30;--wall:#14271E;--floor:#21382B;
+  --stage:#070D0A;--stage-dot:rgba(127,224,176,.08);--proto:#050907;--proto-ink:#E9EFE9;
+  --sh:0 10px 30px rgba(0,0,0,.35);--sh-lg:0 24px 60px -12px rgba(0,0,0,.6);
+  color-scheme:dark;
+}
